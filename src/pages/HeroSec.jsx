@@ -36,10 +36,8 @@ export class HeroSec extends Component {
 
         return (
             <div
-                className="relative w-full flex items-center justify-center px-4 "
-                style={{
-                    height: 'calc(100vh - 100px)',
-                }}
+                className="relative w-full flex items-center justify-center px-4 min-h-[85vh] sm:min-h-[90vh] lg:min-h-[calc(100vh-100px)]"
+
             >
 
                 <div className="absolute inset-0 z-0">
@@ -112,17 +110,17 @@ export class HeroSec extends Component {
                     })}
                 </div>
 
-                <div className="poppins-regular relative z-20 max-w-6xl w-full flex flex-col items-center justify-center gap-6 md:gap-8 lg:gap-8 text-center">
+                <div className="poppins-regular relative z-20 bottom-20 md:bottom-6 max-w-6xl w-full flex flex-col items-center justify-center gap-4 sm:gap-6 lg:gap-8 text-center px-2">
                     <div className="opacity-0 animate-fadeInUp">
-                        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-6xl font text-white leading-tight md:leading-tight lg:leading-tight">
+                        <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl text-white leading-snug sm:leading-tight">
                             <span className="bg-gradient-to-r from-white to-white/40 bg-clip-text text-transparent">T</span>
                             <span className="bg-gradient-to-r from-white to-white/55 bg-clip-text text-transparent">he </span>
                             <span className="bg-gradient-to-r from-white to-white/70 bg-clip-text text-transparent">C</span>
                             <span className="bg-gradient-to-r from-white to-white/80 bg-clip-text text-transparent">oding </span>
                             <span className="bg-gradient-to-r from-white to-white/60 bg-clip-text text-transparent">Challenge </span>
-                            <span className="bg-gradient-to-r from-white to-white/30 bg-clip-text text-transparent">That</span>
+                            <span className="bg-gradient-to-r from-white to-white/30 bg-clip-text text-transparent mr-1">That</span>
                             <br className="hidden sm:block" />
-                            <span className="">Pushes Your Limits</span>
+                            <span className="">{""}Pushes Your Limits</span>
                         </h1>
                     </div>
 
@@ -144,7 +142,10 @@ export class HeroSec extends Component {
                     </div>
 
                     <div className="opacity-0 animate-fadeInUp" style={{ animationDelay: '1.8s' }}>
-                        <button className="group cursor-pointer relative shadow-sm shadow-neutral-500 rounded-full py-3 px-8 md:py-3 md:px10 bg-[#DA190B] text-white text-md md:text-md transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-red-500/30 active:bg-red-900/30">
+                        <button className="mt-12 lg:mt-0 group cursor-pointer relative shadow-sm shadow-neutral-500 rounded-full
+py-3 px-6 sm:py-4 sm:px-8
+bg-[#DA190B] text-white text-sm sm:text-md
+transition-all duration-300 hover:scale-105">
                             <span className="relative z-10">Register Now</span>
                             <div className=" absolute inset-0 rounded-full bg-[#DA190B] opacity-0 group-hover:opacity-100 blur-sm transition-opacity duration-300"></div>
                         </button>
@@ -210,11 +211,11 @@ export class HeroSec extends Component {
                             transform: translate(50%, -50%) scale(0.8);
                         }
                         50% {
-                            opacity: 0.8;
+                            opacity: 0.4;
                             transform: translate(-50%, 50%) scale(1);
                         }
                         100% {
-                            opacity: 1;
+                            opacity: 0.5;
                             transform: translate(50%, -50%) scale(0.8);
                         }
                     }

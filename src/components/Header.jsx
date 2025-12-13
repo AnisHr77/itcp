@@ -55,7 +55,7 @@ export class Header extends Component {
                         }}
                     >
                         <img
-                            className="relative top-2 w-10 h-12 md:w-12 md:h-12"
+                            className="relative top-2 w-10 h-10 md:w-12 md:h-12"
                             src={Logo}
                             alt="logo"
                         />
@@ -92,7 +92,7 @@ export class Header extends Component {
                 </button>
 
                 {isMenuOpen && (
-                    <div className="md:hidden absolute top-16 left-0 right-0 bg-[#010101] z-50 px-6">
+                    <div className="md:hidden absolute h-screen top-16 left-0 right-0 bg-[#010101] z-50 px-6">
                         <ul className="flex flex-col py-10 gap-6 text-md font-semibold">
                             {navLinks.map(link => (
                                 <li key={link.key}>

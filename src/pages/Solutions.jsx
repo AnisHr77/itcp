@@ -87,7 +87,7 @@ export class SolutionsSection extends Component {
         ]
 
         return (
-            <div className="px-12 mx-auto lg:px-32 py-32 relative" ref={this.sectionRef}>
+            <div className="px-4 mx-auto lg:px-32 py-32 relative" ref={this.sectionRef}>
                 <div className="mt-6 flex flex-col items-center justify-center text-center px-4 h-full">
                     <div
                         className="mb-6 opacity-0"

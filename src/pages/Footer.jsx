@@ -1,11 +1,8 @@
 import React from "react";
 import { HiMiniMapPin } from "react-icons/hi2";
-import { AiFillInstagram } from "react-icons/ai";
-import { AiFillLinkedin } from "react-icons/ai";
-
-import { FaFacebook } from "react-icons/fa6";
-import {  MdEmail } from "react-icons/md";
-import {  FaDiscord  } from "react-icons/fa";
+import { AiFillInstagram, AiFillLinkedin } from "react-icons/ai";
+import { FaFacebook, FaDiscord } from "react-icons/fa6";
+import { MdEmail } from "react-icons/md";
 import Logo from "/src/assets/itc.png";
 
 export default function Footer() {
@@ -25,7 +22,6 @@ export default function Footer() {
         { icon: FaFacebook, url: "https://www.facebook.com/itc.blida.1" },
     ];
 
-
     const goTo = (hash) => {
         window.history.pushState(null, "", hash ? `#${hash}` : "#");
         const el = document.getElementById(hash || "home");
@@ -33,55 +29,62 @@ export default function Footer() {
     };
 
     return (
-        <footer className="bg-[#010101] text-gray-400 px-6 lg:px-36 pt-16 pb-6 poppins-regular">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+        <footer className="bg-[#010101] text-gray-400 px-4 sm:px-6 lg:px-36 pt-12 sm:pt-16 pb-6 poppins-regular">
+            {/* MAIN GRID - Mobile: 2 columns, Desktop: 3 columns */}
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-8 sm:gap-12 mb-10 sm:mb-12 text-center md:text-left">
 
-                <div className="space-y-0 relative bottom-6">
-                    <img src={Logo} alt="ITC Logo" className="w-26" />
-                    <p className="px-6 text-sm font-semibold tracking-wide">
+                <div className="flex flex-col items-center md:items-start space-y-3 col-span-1">
+                    <img src={Logo} alt="ITC Logo" className="w-20 sm:w-24 md:w-26" />
+                    <p className="text-sm font-semibold tracking-wide">
                         SHARING IS CARING
                     </p>
-                    <div className="px-5 mt-4 flex items-center gap-2 text-sm">
+                    <div className="flex items-center gap-2 text-sm">
                         <HiMiniMapPin />
-                        <span>University of Blida 1</span>
+                        <span className="text-xs sm:text-sm">University of Blida 1</span>
                     </div>
                 </div>
 
-                <div className="space-y-4">
-                    <h3 className="text-white font-semibold">Follow Us</h3>
-                    <div className="flex gap-4">
+                <div className="space-y-5 col-span-1">
+                    <h3 className="text-white font-semibold text-sm sm:text-base">Follow Us</h3>
+                    <div className="relative left-8 pr-8 md:pr-0   md:left-0 grid grid-cols-2 sm:flex sm:flex-row gap-2 sm:gap-3 justify-start md:justify-start">
                         {socials.map(({ icon: Icon, url }, i) => (
                             <a
                                 key={i}
                                 href={url}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="w-11 h-11 flex items-center justify-center rounded-full bg-[#262728] hover:bg-gray-700 transition"
+                                className="w-8 h-8 sm:w-11 sm:h-11 flex items-center justify-center rounded-full bg-[#262728] hover:bg-gray-700 transition"
                             >
-                                <Icon className={'text-2xl'} />
+                                <Icon className="text-lg sm:text-2xl text-neutral-50" />
                             </a>
                         ))}
                     </div>
 
 
-                    <h3 className="text-white font-semibold mt-6">Contact us</h3>
-                    <div className="flex items-center gap-2 text-sm">
+                    <h3 className="text-white ml-6 md:ml-0 font-semibold mt-8 text-left text-sm sm:text-base">Contact us</h3>
+                    <div className="flex items-center gap-2 text-xs sm:text-sm justify-center md:justify-start">
                         <MdEmail />
-                        <span>itc@gmail.com</span>
+                        <a
+                            href="mailto:contact.itc.blida@gmail.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="hover:underline"
+                        >
+                            itc@gmail.com
+                        </a>
                     </div>
                 </div>
 
-
-                <div className="px-12 space-y-4">
-                    <h3 className="text-white text-xl font-semibold">
+                <div className="space-y-4 px-6 sm:px-6 md:px-12 col-span-2 md:col-span-1 -mt-2 md:mt-0">
+                    <h3 className="text-white text-base sm:text-xl font-semibold text-left    md:text-left">
                         ITC Programing 4.0
                     </h3>
-                    <ul className="grid grid-cols-2 gap-y-4 text-[16px]">
+                    <ul className="relative right-8 md:right-0 grid grid-cols-3 sm:grid-cols-2 gap-y-3 sm:gap-y-4 text-sm sm:text-[16px]  justify-items-center md:justify-items-start">
                         {navLinks.map(link => (
                             <li key={link.label}>
                                 <button
                                     onClick={() => goTo(link.hash)}
-                                    className="hover:text-white transition"
+                                    className="hover:text-white transition text-xs sm:text-sm"
                                 >
                                     {link.label}
                                 </button>
