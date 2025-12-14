@@ -5,5 +5,5 @@ import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
   plugins: [tailwindcss(), react(), imagetools()],
-  base: '/itcp/',
+  base: '/itcp-25-26 /',
 });
